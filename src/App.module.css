@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main{
+    padding: 40px 0;
+}
+.headerContainer{
+    max-width: 900px;
+    margin: auto;
+}
+.headerContainer img{
+    max-width: 220px;
+}
+.container{
+    display: flex;
+    max-width: 900px;
+    margin: auto;
+    gap: 80px;
+}
+
+.rightSide,
+.leftSide{
+    flex: 1;
+    margin: 40px 0;
+}
+.leftSide h1{
+    color: #3f3f41;
+    font-size: 40px;
+}
+.leftSide p{
+    margin: 20px 0 40px;
+    font-size: 18px;
+}
+.leftSide input{
+    padding: 10px 2px;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid rgba(150, 163, 170, 0.5);
+    outline: none;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.leftSide input:disabled{
+    opacity: 0.7;
+}
+.leftSide button{
+    cursor: pointer;
+    width: 100%;
+    color: #fff;
+    padding: 15px 0;
+    background-color: #227C9D;
+    border: 0;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-top: 20px;
+    transition: 0.5s all ease;
+}
+.leftSide button:hover{
+    opacity: 0.8;
+}
+.leftSide button:disabled{
+    cursor: not-allowed;
+    opacity: 1;
+}
+.rightSide{
+    display: flex;
+}
+.rightSide .grid{
+    width: 100%;
+    display: grid;
+    grid-template: auto auto / repeat(2,1fr);
+    gap: 15px;
+}
+.big{
+    flex: 1;
+    display: flex;
+}
+.rightArrow{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #227C9D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 145px;
+    margin-left: -25px;
+    transition: .3s all;
+}
+.rightArrow:hover{
+    background-color: #1f83a7;
+}
+.rightArrow img{
+    width: 40px;
+}
+@media (max-width: 992px){
+    header{
+        padding: 0 20px;
+    }
+    .leftSide p{
+        font-size: 17px;
+    }
+    .container{
+        padding: 0 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .rightSide{
+        margin: 10px;
+    }
+    .leftSide{
+        margin: 40px 0 20px;
+    }
+    .rightArrow{
+        margin: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+    }
+    .rightArrow img{
+        width: 30px;
+    }
+}
+@media (max-width: 500px){
+    .leftSide h1{
+        font-size: 35px;
+        text-align: center;
+    }
+    .leftSide p{
+        font-size: 16px;
+    }
+    .rightSide .grid{
+        grid-template: auto / auto;
+    }
+}
+@media (max-width: 390px){
+    .leftSide h1{
+        font-size: 32px;
+    }
+    input::placeholder{
+        font-size: 12px;
+    }
+}
